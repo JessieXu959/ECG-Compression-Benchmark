@@ -1,0 +1,41 @@
+title: ECG Compression Benchmark
+description: Benchmark for evaluating ECG compression algorithms.
+image: ModelingLab.png
+terms: pages/terms.html
+pages:
+  - title: Overview
+    file: pages/overview.html
+  - title: Evaluation
+    file: pages/evaluation.html
+  - title: Terms
+    file: pages/terms.html
+  - title: Data
+    file: pages/data.html
+phases:
+  - index: 0
+    name: Phase 1 - Compression Evaluation
+    description: Evaluate compression ratio and reconstruction accuracy.
+    start: 2024-12-31
+    end: 2027-12-01
+    tasks: [0]
+tasks:
+  - index: 0
+    name: ECG Compression Task
+    description: Compress ECG signals and evaluate performance.
+    input_data: input_data.zip
+    ingestion_program: ingestion_program.zip
+    scoring_program: scoring_program.zip
+solutions:
+  - index: 0
+    path: starting_kit.zip
+    tasks: [0]
+leaderboard:
+  - title: Results
+    key: main
+    columns:
+      - title: Compression Ratio
+        key: compression_ratio
+        sorting: desc
+      - title: MSE
+        key: mse
+        sorting: asc
